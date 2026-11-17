@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calais Soper, Product Designer</title>
+  <meta name="description" content="Calais Soper is a product designer in Auckland, NZ, specialising in UX/UI and user-centred solutions.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Order matters: tokens → base → components (later files win ties) -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- defer = download now, run after the page has been parsed -->
+  <script src="js/clock.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html">Calais Soper</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#work">Work</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <!-- DOM order = reading order = Tab order. Don't reorder with CSS `order`. -->
+      <div class="bento" id="work">
+
+        <!-- Intro -->
+        <section class="tile tile--intro">
+          <h1 class="tile__title">Product designer who cares about <em>the right problem.</em></h1>
+          <p class="tile__text">A designer driven by passion and fuelled by curiosity, specialising in UX/UI. Crafting meaningful user-centered solutions.</p>
+        </section>
+
+        <!-- Project 1 -->
+        <article class="tile tile--project">
+          <div class="tile__body">
+            <h2 class="tile__title"><a class="tile__link" href="case-studies/freckl.html">Freckl.</a></h2>
+            <p class="tile__text">An accessible web application to assist with healthy skin practice and melanoma awareness in NZ.</p>
+            <p class="tile__badge">Best Awards 2023 Public Good Finalist</p>
+          </div>
+          <img class="tile__media" src="images/Freckl.png" width="300" height="169" loading="lazy"
+               alt="Three phone screens from the Freckl app: a chat, a dashboard with UV index and spot checks, and a mole detail page.">
+        </article>
+
+        <!-- Project 2 -->
+        <article class="tile tile--project">
+          <div class="tile__body">
+            <h2 class="tile__title"><a class="tile__link" href="case-studies/chnnl-dashboard.html">Chnnl analytics dashboard</a></h2>
+            <p class="tile__text">A live analytics dashboard enabling organisations to measure, monitor, and mitigate psychosocial risks in the workplace.</p>
+          </div>
+          <img class="tile__media" src="images/analytics-dashboard-hero-2023.webp" width="1680" height="1194" loading="lazy"
+               alt="Laptop showing the Chnnl wellbeing dashboard with an organisation wellness score, flags, a team wellbeing bar chart and score rings.">
+        </article>
+
+        <!-- About teaser -->
+        <section class="tile tile--about">
+          <h2 class="tile__title">About</h2>
+          <p class="tile__text">[PLACEHOLDER] Two sentences about you.</p>
+          <a href="about.html">More about me</a>
+        </section>
+
+        <!-- Availability + Auckland time -->
+        <section class="tile tile--status" aria-label="Availability">
+          <p class="tile__status-line"><span class="status-dot" aria-hidden="true"></span>Available for new projects</p>
+          <p class="tile__time"><span>Auckland, NZ</span> <span id="auckland-time"></span></p>
+        </section>
+
+        <!-- Project 3 (placeholder until you pick it) -->
+        <article class="tile tile--project tile--placeholder">
+          <div class="tile__body">
+            <h2 class="tile__title">[PLACEHOLDER] Third case study</h2>
+            <p class="tile__text">[PLACEHOLDER] One line on the problem this project tackled.</p>
+          </div>
+        </article>
+
+        <!-- Contact -->
+        <section class="tile tile--contact" id="contact">
+          <h2 class="tile__title">Sound good? Let's talk.</h2>
+          <ul class="tile__contact-list">
+            <li><a href="mailto:calaiscreative@gmail.com">calaiscreative@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/calaissoper">LinkedIn</a></li>
+            <li><a href="https://drive.google.com/file/d/1xPcPE4aNJzmAV_d4_rfmEME_pWqSiafw/view?usp=sharing">Resume</a></li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© 2026 Calais Soper, Product Designer</span>
+      <span>Built with help from Claude</span>
+    </div>
+  </footer>
+</body>
+</html>
